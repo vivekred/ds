@@ -1,12 +1,14 @@
 package com.ds;
 
 public class BubbleSort {
+    static int arr[] = Util.arr;
+
     public static void main(String[] args) {
-        int arr[] = {5,3,6,1,2,8};
-        printArr(arr);
+        System.out.println("Bubble sort..");
+        Util.printArr(arr);
         bubbleSort(arr);
         System.out.println();
-        printArr(arr);
+        Util.printArr(arr);
     }
 
     static void bubbleSort(int []arr){
@@ -21,9 +23,5 @@ public class BubbleSort {
         }
     }
 
-    static void printArr(int []arr){
-        for(int i:arr){
-            System.out.print(i + " ");
-        }
-    }
+
 }
