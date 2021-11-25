@@ -1,9 +1,10 @@
 package com.ds;
 
 public class BubbleSort {
-    static int arr[] = Util.arr;
+    static int arr[] = new Util().arr;
 
     public static void main(String[] args) {
+        System.out.println();
         System.out.println("Bubble sort..");
         Util.printArr(arr);
         bubbleSort(arr);
