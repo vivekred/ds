@@ -8,15 +8,13 @@ public class DBUtil {
     String url = "jdbc:mysql://127.0.0.1:3306/scott?autoReconnect=true&useSSL=false";
     String user = "root", pass = "root";
     Connection con = null;
-    static boolean init = false;
 
     public void init() throws  Exception{
-        if(! init){
+        if(con == null){
             System.out.println("In init method of DB Util");
             Class.forName(driver);
             con = DriverManager.getConnection(url, user, pass);
-            init = true;
-
+            System.out.println("Conn is:" + con);
         }
     }
 
